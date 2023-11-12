@@ -10,8 +10,9 @@ const Cart = () => {
   const [count, setCount] = useState<any>(1);
 
   useEffect((): void => {
-    let prods = JSON.parse(localStorage.getItem("cart")) || [];
-    setCardPrice(prods[0].price);
+    let prods = JSON.parse(localStorage.getItem("cart")!) || [];
+    console.log(prods)
+    setCardPrice(prods?.price);
     setCart(prods);
   }, []);
 
@@ -20,14 +21,15 @@ const Cart = () => {
     setCardPrice(cardPrice * count);
     // cart.numOfProducts + 1;
   };
-  const decrement = () => {
-    if (count == 0) {
+  const decrement = (): void => {
+    if (count === 0) {
       setCardPrice(cardPrice);
       setCount(0);
-    } else if (count == 1) {
-      alert("Do dou want to delete this cart")
-        ? localStorage.removeItem("cart")
-        : null;
+    } else if (count === 1) {
+      if (window.confirm("Do you want to delete this cart?")) {
+        localStorage.removeItem("cart");
+      }
+      window.location.reload();
     } else {
       setCardPrice(cardPrice / count);
       setCount(count - 1);
