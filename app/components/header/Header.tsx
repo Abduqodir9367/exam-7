@@ -7,11 +7,11 @@ const Header = () => {
       <div className="container">
         <nav>
           <div className="nav-links flex items-center">
-            <Link href={"/"}>
+            <Link href={"/home"}>
               {" "}
               <img src="../logo.png" alt="img" className="logo" />
             </Link>
-            <Link href={"/"}>Home</Link>
+            <Link href={"/home"}>Home</Link>
             <Link href={"dishes"}>Dishes</Link>
           </div>
           <div className="nav-items">

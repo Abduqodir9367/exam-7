@@ -12,7 +12,7 @@ const Cart = () => {
   useEffect((): void => {
     let prods = JSON.parse(localStorage.getItem("cart")!) || [];
     console.log(prods)
-    setCardPrice(prods?.price);
+    setCardPrice(prods[0]?.price);
     setCart(prods);
   }, []);
 
