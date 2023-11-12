@@ -1,0 +1,47 @@
+footer {
+  background: #eaeaea;
+  // height: 345px;
+  .logo {
+    margin-top: 96px;
+  }
+  .line {
+    width: 1246px;
+    height: 1px;
+    opacity: 0.25;
+    background: #818181;
+    margin-top: 29px;
+    margin-bottom: 57px;
+  }
+  .foter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      color: #999;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 25px;
+      margin-bottom: 30px; 
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        margin-bottom: 40px;
+        
+    }
+
+  }
+}
+
+
+@media (max-width: 976px) {
+
+  footer{
+    .line{
+      width: 800px;
+      margin-left: 80px;
+    }
+  }
+
+}
