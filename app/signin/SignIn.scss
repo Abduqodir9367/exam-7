@@ -57,6 +57,7 @@
         display: flex;
         align-items: center;
         margin-top: 4px;
+        column-gap: 5px;
         p {
           color: #3e3e3e;
           font-size: 18.9px;
@@ -67,8 +68,8 @@
           color: #6c5fbc;
           font-size: 18.9px;
           font-weight: 700;
-          letter-spacing: 0.189px;
           text-decoration: underline;
+          margin-top: -12px;
         }
       }
     }
@@ -103,7 +104,6 @@
       display: flex;
       align-items: center;
       column-gap: 350px;
-      margin-top: 41px;
     p {
       color: var(--greyscale-600, #718096);
       font-size: 16px;

@@ -24,10 +24,6 @@ const Home = () => {
     }
 
     dispatch(getProducts());
-
-    // return () => {
-    //   dispatch(reset());
-    // };
   }, []);
 
   if (isLoading) {
@@ -43,10 +39,9 @@ const Home = () => {
     }
   };
 
-
   return (
     <div className="Home">
-      <Header />  
+      <Header />
       <section className="hero">
         <div className="container">
           <div className="big">
@@ -285,7 +280,7 @@ const Home = () => {
                   “ Online invoice payment helps effort. Online invoice payment
                   helps companies save time ”
                 </p>
-                <img src="./stars.png" alt="stars"  />
+                <img src="./stars.png" alt="stars" />
               </div>
             </div>
           </div>

@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
 import productService from "./productService";
-// import { ProductType, ProductsType } from "@/app/types/Product.type";
 import { ProductType, ProductsType } from "@/app/types/Product.type";
 
 const initialState = {
@@ -13,7 +12,7 @@ const initialState = {
 
 // Get products
 export const getProducts = createAsyncThunk(
-  "student/getProducts",
+  "product/getProducts",
   async (_, thunkAPI) => {
     try {
       return await productService.getProducts();
@@ -56,25 +55,6 @@ const productSlice = createSlice({
           state.message = action.payload;
         }
       );
-    // .addCase(createStudent.pending, (state: StudentsType) => {
-    //   state.isLoading = true;
-    // })
-    // .addCase(
-    //   createStudent.fulfilled,
-    //   (state: StudentsType, action: PayloadAction<any>) => {
-    //     state.isLoading = false;
-    //     state.isSuccess = true;
-    //     state.products.push(action.payload);
-    //   }
-    // )
-    // .addCase(
-    //   createStudent.rejected,
-    //   (state: StudentsType, action: PayloadAction<any>) => {
-    //     state.isLoading = false;
-    //     state.isError = true;
-    //     state.message = action.payload;
-    //   }
-    // );
   },
 });
 

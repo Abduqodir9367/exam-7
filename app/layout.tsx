@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.scss";
 // import Header from "./components/header/Header";
 // import Footer from "./components/footer/Footer";
 // import SignUp from "./signup/page";
 import Layout from "./components/Layout";
 import { ToastContainer } from "react-toastify";
+import "bootstrap/dist/css/bootstrap.min.css"; 
 import "react-toastify/ReactToastify.min.css";
 
 const inter = Inter({ subsets: ["latin"] });

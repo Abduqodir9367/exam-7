@@ -9,31 +9,43 @@ import { toast } from "react-toastify";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
 import Link from "next/link";
+import axios from "axios";
 
 const Dishes = () => {
   const [cart, setCart] = useState<ProductType[]>([]);
-
+  const [searchValue, setSearchValue] = useState("");
+  const [searchDishes, setSearchDishes] = useState([]);
   const { products, isLoading, isError, isSuccess, message } = useAppSelector(
     (state) => state.product
   );
   const dispatch = useAppDispatch();
 
+  const fetchSearchDishes = async () => {
+    try {
+      let res = await axios.get(
+        `https://654ea70d358230d8f0ccbf59.mockapi.io/api/v1/Dishes?search=${searchValue}`
+      );
+      let data = await res.data;
+      setSearchDishes(data);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     if (isError) {
       toast.error(message);
     }
-
-    dispatch(getProducts());
-
-    // return () => {
-    //   dispatch(reset());
-    // };
   }, []);
+
+  useEffect(() => {
+    fetchSearchDishes();
+  }, [searchValue]);
 
   if (isLoading) {
     return <Spinner />;
   }
-
 
   const handleAddToCart = (product: ProductType): void => {
     toast.success("Successfully added in Cart");
@@ -49,9 +61,19 @@ const Dishes = () => {
       <Header />
       <section className="hero">
         <div className="container">
-          {products.length > 0 ? (
+          <input
+            type="text"
+            placeholder="search..."
+            name="search"
+            className="form-control"
+            id="search"
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
+
+          {searchDishes.length > 0 ? (
             <div className="cards">
-              {products.slice(0, 15).map((product: ProductType) => (
+              {searchDishes.map((product: ProductType) => (
                 <div className="card" key={product.id}>
                   <Link href={`/dishes/${product.id}`}>
                     <div className="img">
@@ -69,7 +91,6 @@ const Dishes = () => {
                     </div>
                     <div className="foter">
                       <h4>{product.price}</h4>
-                      {/* <p>.99</p> */}
                       <button onClick={() => handleAddToCart(product)}>
                         +
                       </button>

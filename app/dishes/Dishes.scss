@@ -1,5 +1,10 @@
 .hero {
   margin-top: 240px;
+  input{
+    width: 400px;
+    margin-left: 450px;
+    margin-bottom: 50px;
+  }
   .cards {
     display: flex;
     align-items: center;
@@ -211,3 +216,5 @@
   }
 }
 }
+
+

@@ -14,7 +14,7 @@ const SignIn = () => {
         <img src="../logo2.png" alt="img" />
         <div className="big">
           <div className="left">
-            <h1>Sign Up To eatly</h1>
+            <h1>Sign In To eatly</h1>
             <form>
               <input
                 type="email"
@@ -34,7 +34,7 @@ const SignIn = () => {
               />
 
               <button type="submit" onClick={() => router.push("/home")}>
-                SIGN UP
+                SIGN IN
               </button>
             </form>
             <div className="end">

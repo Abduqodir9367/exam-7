@@ -58,7 +58,7 @@ const Details = ({ params: { id } }: any) => {
         </Link>
         <div className="big">
           {detailsDish ? (
-            <div className="card" key={detailsDish.id}>
+            <div className="cart" key={detailsDish.id}>
               <div className="img">
                 <img src={detailsDish.imgUrl} alt="img" className="image" />
                 <img src="../like.png" alt="icon" className="like" />

@@ -1,6 +1,6 @@
 .details {
   margin-top: 200px;
-  .back{
+  .back {
     display: flex;
     align-items: center;
     column-gap: 4px;
@@ -13,13 +13,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    .card {
+    .cart {
       width: 500.628px;
       height: 390.36px;
       display: flex;
-    align-items: center;
-    justify-content: center;
-      // flex-direction: column;
+      align-items: center;
+      justify-content: center;
       border-radius: 34.581px;
       border: 1.441px solid var(--colors-gray-gray-2, #f4f4f6);
       background: var(--Pure-White, #fff);
@@ -27,12 +26,11 @@
       .img {
         .image {
           width: 230px;
-          height: 23  0px;
+          height: 230px;
           border-radius: 50%;
         }
         .like {
           position: absolute;
-          // margin-top: -190px;
           margin-left: 200px;
         }
       }

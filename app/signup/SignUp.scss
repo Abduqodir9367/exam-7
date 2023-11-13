@@ -69,6 +69,8 @@
         font-weight: 700;
         letter-spacing: 0.189px;
         text-decoration: underline;
+        margin-top: -14px; 
+
       }
     }
   }
@@ -103,7 +105,6 @@
     display: flex;
     align-items: center;
     column-gap: 350px;
-    margin-top: 41px;
   p {
     color: var(--greyscale-600, #718096);
     font-size: 16px;

@@ -42,7 +42,6 @@
               align-items: center;
               column-gap: 3px;
               .minus {
-                // padding: 5px;
                 width: 30px;
                 height: 30px;
                 border: 1px solid #323142;
@@ -57,12 +56,14 @@
                 color: #fff;
                 border-radius: 30%;
               }
+              p{
+                margin-top: 13px;
+              }
             }
           }
           .bottom {
             display: flex;
             align-items: center;
-            // column-gap: 350px;
             justify-content: space-between;
             margin-top: 5px;
             h5 {
