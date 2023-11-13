@@ -1,8 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import "./SignIn.scss";
+import { useRouter } from "next/navigation";
 
 const SignIn = () => {
+  const router = useRouter();
+
   return (
     <div className="SignIn">
       <div className="container">
@@ -11,16 +16,26 @@ const SignIn = () => {
           <div className="left">
             <h1>Sign Up To eatly</h1>
             <form>
-              <input type="email" name="email" id="email" placeholder="Email" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                className="form-control"
+                required
+              />
               <input
                 type="password"
                 name="password"
                 id="password"
                 placeholder="Password"
+                className="form-control"
+                required
               />
-              <Link href={"/"}>
-                <button type="submit">SIGN UP</button>
-              </Link>
+
+              <button type="submit" onClick={() => router.push("/home")}>
+                SIGN UP
+              </button>
             </form>
             <div className="end">
               <p>Create A New Account?</p>

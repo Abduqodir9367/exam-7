@@ -3,6 +3,7 @@
   .cards {
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 30px;
     row-gap: 30px;
     flex-wrap: wrap;
@@ -172,4 +173,41 @@
       }
     }
   }
+}
+
+
+@media (max-width: 976px) {
+  .hero{
+    .liner{
+      width: 900px;
+    }
+  }
+.second{
+  .big{
+   .liner1{
+    .line{
+      width: 900px;
+    }
+   }
+  }
+}
+}
+@media (max-width: 768px) {
+  .hero{
+    .liner{
+      width: 400px;
+      margin-left: 80px;
+    }
+  }
+.second{
+  .big{
+   .liner1{
+    .line{
+      width: 400px;
+      margin-left: 20px;
+      
+    }
+   }
+  }
+}
 }

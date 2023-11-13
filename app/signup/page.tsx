@@ -1,8 +1,10 @@
+"use client";
 import React from "react";
 import "./SignUp.scss";
 import Link from "next/link";
-
+import { useRouter } from "next/navigation";
 const SignUp = () => {
+  const router = useRouter();
   return (
     <div className="SignUp">
       <div className="container">
@@ -16,18 +18,28 @@ const SignUp = () => {
                 name="name"
                 id="name"
                 placeholder="Full Name"
+                className="form-control"
+                required
               />
-              <input type="email" name="email" id="email" placeholder="Email" />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                className="form-control"
+                required
+              />
               <input
                 type="password"
                 name="password"
                 id="password"
                 placeholder="Password"
+                className="form-control"
+                required
               />
-              <Link href={"home"}>
-                {" "}
-                <button type="submit">SIGN UP</button>
-              </Link>
+              <button type="submit" onClick={() => router.push("/home")}>
+                SIGN UP
+              </button>
             </form>
             <div className="end">
               <p>Already Have An Account?</p>

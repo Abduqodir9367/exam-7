@@ -45,7 +45,7 @@ const Cart = () => {
           {cart.length > 0 ? (
             <div className="cards">
               {cart.map((i: ProductType, index) => (
-                <div className="card" key={index}>
+                <div className="cart" key={index}>
                   <img src={i.imgUrl} alt="img" />
                   <div className="content">
                     <div className="top">
