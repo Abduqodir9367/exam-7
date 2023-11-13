@@ -51,8 +51,7 @@ const Details = ({ params: { id } }: any) => {
     <div className="details">
       <Header />
       <div className="container">
-        <Link href={"/"}>
-          {" "}
+        <Link href={"/dishes"}>
           <button className="back">
             <img src="../back.svg" alt="" /> Go back
           </button>

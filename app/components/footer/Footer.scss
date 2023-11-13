@@ -45,3 +45,21 @@ footer {
   }
 
 }
+
+@media (max-width: 768px) {
+  footer{
+    .line{
+      width: 600px;
+      // margin-left: 80px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  footer{
+    .line{
+      width: 400px;
+      margin-left: 20px;
+    }
+  }
+}

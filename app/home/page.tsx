@@ -43,15 +43,10 @@ const Home = () => {
     }
   };
 
-  // const handleAddToCart = (product: ProductType) => {
-  //   if (!cart.includes(product)) {
-  //     setCart([...cart, { ...product, numOfProducts: 1 }]);
-  //   }
-  // };
-  // localStorage.setItem("cart", JSON.stringify(cart));
+
   return (
     <div className="Home">
-      <Header />
+      <Header />  
       <section className="hero">
         <div className="container">
           <div className="big">
@@ -124,7 +119,7 @@ const Home = () => {
                 <img src="./star.png" alt="img  " />
                 <p>4.8</p>
               </div>
-              <img src="./save.png" alt="icon" />
+              <img src="./save.png" alt="icon" className="res" />
             </div>
           </div>
         </div>
@@ -153,7 +148,6 @@ const Home = () => {
                   </div>
                   <div className="foter">
                     <h4>{product.price}</h4>
-                    {/* <p>.99</p> */}
                     <button onClick={() => handleAddToCart(product)}>+</button>
                   </div>
                 </div>
@@ -281,7 +275,7 @@ const Home = () => {
                   and save maximum effort for the clients and save maximum
                   effort. Online invoice payment helps companies save time ”
                 </p>
-                <img src="./stars.png" alt="stars" />
+                <img src="./stars.png" alt="stars" className="res" />
               </div>
               <img src="./divider.png" alt="" className="lne" />
             </div>
@@ -291,7 +285,7 @@ const Home = () => {
                   “ Online invoice payment helps effort. Online invoice payment
                   helps companies save time ”
                 </p>
-                <img src="./stars.png" alt="stars" />
+                <img src="./stars.png" alt="stars"  />
               </div>
             </div>
           </div>

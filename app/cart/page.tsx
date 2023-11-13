@@ -26,7 +26,7 @@ const Cart = () => {
       setCardPrice(cardPrice);
       setCount(0);
     } else if (count === 1) {
-      if (window.confirm("Do you want to delete this cart?")) {
+      if (window.confirm("Do you sure delete this card?")) {
         localStorage.removeItem("cart");
       }
       window.location.reload();

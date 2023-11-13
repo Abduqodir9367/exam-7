@@ -27,9 +27,10 @@
           display: flex;
           flex-direction: column;
           .top {
+            width: 400px;
             display: flex;
             align-items: center;
-            column-gap: 264px;
+            justify-content: space-between;
             h3 {
               color: var(--Black-Color, #323142);
               font-size: 22px;
@@ -61,7 +62,8 @@
           .bottom {
             display: flex;
             align-items: center;
-            column-gap: 350px;
+            // column-gap: 350px;
+            justify-content: space-between;
             margin-top: 5px;
             h5 {
               color: var(--Black-Color, #323142);
