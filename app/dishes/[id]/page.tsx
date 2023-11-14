@@ -1,5 +1,5 @@
 "use client";
-import { Provider, useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import "./Details.scss";
 import axios from "axios";
 import Header from "@/app/components/header/Header";
@@ -73,7 +73,6 @@ const Details = ({ params: { id } }: any) => {
                 </div>
                 <div className="foter">
                   <h4>{detailsDish.price}</h4>
-                  {/* <p>.99</p> */}
                   <button onClick={() => handleAddToCart(detailsDish)}>
                     +
                   </button>
@@ -109,4 +108,4 @@ const Details = ({ params: { id } }: any) => {
   );
 };
 
-export default Details;
+export default memo(Details);

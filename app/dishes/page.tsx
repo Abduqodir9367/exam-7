@@ -1,8 +1,7 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./Dishes.scss";
 import { useAppDispatch, useAppSelector } from "../hooks/hooks";
-import { getProducts, reset } from "../features/product/productSlice";
 import { ProductType } from "../types/Product.type";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";
@@ -15,7 +14,7 @@ const Dishes = () => {
   const [cart, setCart] = useState<ProductType[]>([]);
   const [searchValue, setSearchValue] = useState("");
   const [searchDishes, setSearchDishes] = useState([]);
-  const { products, isLoading, isError, isSuccess, message } = useAppSelector(
+  const { isLoading, isError, message } = useAppSelector(
     (state) => state.product
   );
   const dispatch = useAppDispatch();
@@ -156,4 +155,4 @@ const Dishes = () => {
   );
 };
 
-export default Dishes;
+export default memo(Dishes);

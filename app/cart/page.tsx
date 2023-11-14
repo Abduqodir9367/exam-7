@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "./Cart.scss";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
@@ -11,7 +11,6 @@ const Cart = () => {
 
   useEffect((): void => {
     let prods = JSON.parse(localStorage.getItem("cart")!) || [];
-    console.log(prods);
     setCardPrice(prods[0]?.price);
     setCart(prods);
   }, []);
@@ -117,4 +116,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default memo(Cart);

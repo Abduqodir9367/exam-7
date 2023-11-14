@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import React, { memo } from "react";
 import "./SignIn.scss";
 import { useRouter } from "next/navigation";
 
@@ -62,4 +62,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default memo(SignIn);

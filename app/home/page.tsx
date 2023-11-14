@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 import "../home/Home.scss";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
@@ -310,4 +310,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);

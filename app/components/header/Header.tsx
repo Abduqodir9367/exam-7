@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import "./Header.scss";
 import Link from "next/link";
 
@@ -35,8 +35,12 @@ const Header = () => {
               {" "}
               <img src="../logo.png" alt="img" className="logo" />
             </Link>
-            <Link href={"/home"} className="href1">Home</Link>
-            <Link href={"dishes"} className="href1">Dishes</Link>
+            <Link href={"/home"} className="href1">
+              Home
+            </Link>
+            <Link href={"dishes"} className="href1">
+              Dishes
+            </Link>
           </div>
           <div className="nav-items">
             <Link href={"/cart"}>
@@ -70,4 +74,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);
