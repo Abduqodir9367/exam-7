@@ -480,7 +480,7 @@
             margin-left: 10px;
           }
           .image {
-            margin-left: 155px;
+            margin-left: 105px;
           }
           margin-bottom: 35px;
         }
@@ -515,6 +515,7 @@
           .res {
             width: 138px;
             height: 23px;
+            margin-top: -1px;
           }
         }
         img {
@@ -527,6 +528,9 @@
           width: 270px;
           p {
             width: 220px;
+          }
+          img{
+            margin-top: -2px;
           }
         }
       }

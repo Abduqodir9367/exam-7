@@ -235,7 +235,7 @@ const Home = () => {
               <div className="par">
                 <img src="./person.png" alt="img" />
                 <div className="name flex flex-col items-start">
-                  <h3>Alexander R.</h3>
+                  <h3>Aelxander R.</h3>
                   <p>01 Year With Us </p>
                 </div>
                 <svg
