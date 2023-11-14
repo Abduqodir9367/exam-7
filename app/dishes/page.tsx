@@ -27,7 +27,6 @@ const Dishes = () => {
       );
       let data = await res.data;
       setSearchDishes(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
